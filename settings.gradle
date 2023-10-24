@@ -1,0 +1,20 @@
+import org.gradle.api.initialization.resolve.RepositoriesMode
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        mavenLocal()
+        maven { url "https://jitpack.io" }
+//        flatDir {
+//            dirs 'libs'
+//        }
+    }
+}
+rootProject.name = "MNC Identifier SDK"
+include ':app'
+include ':face-detection'
+include ':ocr'
+include ':core'
